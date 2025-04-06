@@ -1,8 +1,14 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 
 const Contact = () => {
   return (
     <div>
+      <div className="bg-[#2C3E50] h-24">
+      <Navabar/>
+    </div>
+
+      <div>
           <div className="text-center pt-12 md:pb-12 px-6 mt-12">
     <h1 className="font-display font-bold text-5xl mb-6 font-serif text-gray-700 ">Get in Touch</h1>
   </div>
@@ -73,6 +79,7 @@ const Contact = () => {
       </div>
     </div>
   </div>
+    </div>
     </div>
   )
 }
