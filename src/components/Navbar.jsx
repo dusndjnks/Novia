@@ -22,24 +22,23 @@ const Navbar = () => {
             <button onClick={() => setShowMenu(false)} className="absolute top-0 left-0 mt-8 ml-6">
               <img src={close} alt="Close" className="w-6 h-6 md:w-8 md:h-8" />
             </button>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
-            <NavLink to="/about">About Us</NavLink>
-            <NavLink to="/projects">Our Projects</NavLink>
+            <NavLink className="text-[#2C3E50]" to="/">Home</NavLink>
+            <NavLink className="text-[#2C3E50]" to="/about">About Us</NavLink>
+            <NavLink className="text-[#2C3E50]" to="/projects">Our Projects</NavLink>
           </div>
-          <div className="absolute inset-0 w-full h-full bg-[#E2C6C2]"></div>
+          <div className="absolute inset-0 w-full h-full bg-[#BFD8E1]"></div>
         </div>
       )}
         </div> 
 
             <div className='flex items-center justify-center w-full'>
-                <NavLink>
+                <NavLink to="/">
                 <h1 className='text-white md:text-2xl uppercase font-semibold font-serif'>Candid Novia</h1>
                 </NavLink>
             </div>
 
             <div className='flex items-center justify-end'>
-                <NavLink>
+                <NavLink to="/contact">
                     <img src={contact} alt="" className='w-6 h-6 md:w-8 md:h-8' />
                 </NavLink>
             </div>
