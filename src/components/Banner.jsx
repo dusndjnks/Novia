@@ -27,7 +27,7 @@ const Banner = () => {
       <img
         src={images[current]}
         alt={`Slide ${current + 1}`}
-        className="w-full h-full object-cover absolute inset-0"
+        className="w-full h-full object-cover absolute inset-0 "
       />
 
       {/* Hero Text */}
