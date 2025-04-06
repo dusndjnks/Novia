@@ -1,11 +1,12 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const Contact = () => {
   return (
     <div>
       <div className="bg-[#2C3E50] h-24">
-      <Navabar/>
+      <Navbar/>
     </div>
 
       <div>
@@ -80,6 +81,7 @@ const Contact = () => {
     </div>
   </div>
     </div>
+    <Footer/>
     </div>
   )
 }
