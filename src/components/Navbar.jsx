@@ -27,7 +27,7 @@ const Navbar = () => {
             <NavLink to="/about">About Us</NavLink>
             <NavLink to="/projects">Our Projects</NavLink>
           </div>
-          <div className="absolute inset-0 w-full h-full bg-[#D6A99A]"></div>
+          <div className="absolute inset-0 w-full h-full bg-[#E2C6C2]"></div>
         </div>
       )}
         </div> 
