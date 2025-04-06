@@ -2,11 +2,106 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Banner from '../components/Banner'
+import img from "../images/pexels-anil-sharma-2149101452-31381682.jpg"
+import img1 from "../images/pexels-shaantanu-bhatt-941724-10327752.jpg"
+import img2 from "../images/pexels-camera-treasure-928922-17657763.jpg"
+
+import img4 from "../images/pexels-ds-babariya-756428940-28501688.jpg"
+
+import grid from "../images/pexels-theweddingfog-2995347.jpg"
+import grid1 from "../images/pexels-darkmodecinema-19567887.jpg"
+import grid2 from "../images/pexels-blackbean-weddings-820560431-19302447.jpg"
+import { NavLink } from 'react-router-dom'
+
 
 const Home = () => {
   return (
     <div className=''>
         <Banner/>
+      
+      
+		<div className="grid grid-cols-1 md:grid-cols-2">
+		  <div className="bg-white p-12 md:p-24 flex justify-end items-center">
+		      <img src={img} alt="Wedding Post" className="w-full max-w-md"/>
+		  </div>
+		  <div className="bg-gray-100 p-12 md:p-24 flex justify-start items-center">
+		    <div className="max-w-md">
+		      <div className="w-24 h-2 bg-yellow-800 mb-4"></div>
+		      <h2 className="font-display font-bold font-serif text-2xl md:text-3xl lg:text-4xl mb-6">Unforgettable Wedding Stories</h2>
+		      <p className="font-light text-gray-600 text-sm md:text-base mb-6 leading-relaxed">Telling your love story through timeless imagery and natural emotion.</p>
+		      <NavLink to="/about" className="inline-block border-2 border-yellow-800 font-light text-yellow-800 text-sm uppercase tracking-widest py-3 px-8 hover:bg-yellow-800 hover:text-white">Read more</NavLink>
+		    </div>
+		  </div>
+		</div>
+
+    <div>
+		<img src={img1} class="w-full h-screen object-cover object-top" />
+		</div>
+
+    <div className="max-w-xl mx-auto text-center py-24 md:py-32 px-2">
+		  <div className="w-24 h-2 bg-yellow-800 mb-4 mx-auto"></div>
+		  <h2 className="font-serif font-display font-bold text-3xl md:text-4xl lg:text-5xl mb-6">
+		    Capturing Timeless Moments
+		  </h2>
+		  <p className="font-light text-gray-600 mb-6 leading-relaxed">
+		    Celebrate love, light, and candid emotion through our lens. Let us turn your most beautiful day into lifelong memories.
+		  </p>
+		</div>
+
+    <div class="flex flex-wrap bg-black">
+    <a href="/category3" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
+      <div class="relative z-10">Weddings</div>
+      <img src={grid2} class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Stories" />
+    </a>
+    <a href="/category2" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
+      <div class="relative z-10">Lifestyle Photography</div>
+      <img src={grid1} class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Engagements" />
+    </a>
+    <a href="/category1" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
+      <div class="relative z-10">Maternity & Newborn</div>
+      <img src={grid} class="absolute inset-0 w-full h-full object-cover object-top opacity-50" alt="Weddings" />
+    </a>
+    </div>
+
+
+    <div className="grid grid-cols-1 md:grid-cols-2">
+    <div className="bg-white p-12 md:p-24 flex flex-reverse justify-start items-center">  
+          <img src={img2} alt="Wedding Moment" className="w-full max-w-md"/>
+      </div>
+      <div className="md:order-first bg-gray-100 p-12 md:p-24 flex justify-end items-center">
+        <div className="max-w-md">
+          <div className="w-24 h-2 bg-yellow-800 mb-4"></div>
+          <h2 className="font-serif font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-6">Elegant Wedding Moments</h2>
+          <p className="font-light text-gray-600 text-sm md:text-base mb-6 leading-relaxed">Discover stories captured with grace and warmth. Each frame tells the beauty of real moments on your special day.</p>
+          <a href="/about" className="inline-block border-2 border-yellow-800 font-light text-yellow-800 text-sm uppercase tracking-widest py-3 px-8 hover:bg-yellow-800 hover:text-white">Read more</a>
+        </div>
+      </div>
+    </div>  
+
+      <div className="relative w-full px-6 py-16 md:py-24 lg:py-32">
+        <img src={img4} alt="Footer CTA Background" className="absolute inset-0 w-full h-full object-cover"/>
+        <div className="absolute inset-0 bg-black bg-opacity-50" />
+        <div className="relative z-10 text-center text-white max-w-3xl mx-auto">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-6 font-serif">Let's Capture Your Moment</h1>
+          <p className="text-base md:text-lg font-medium mb-8">Book your timeless photoshoot today with Candid Novia.</p>
+          <NavLink to="/contact" className="inline-block bg-yellow-900 text-white uppercase text-sm tracking-widest font-heading px-8 py-4 hover:bg-yellow-700 transition">Book Now</NavLink>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <Footer/>
     </div>
   )
