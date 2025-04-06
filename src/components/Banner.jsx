@@ -20,7 +20,7 @@ const Banner = () => {
     }, []);
   
   return (
-    <div className="relative w-full h-[500px] overflow-hidden">
+    <div className="relative w-full h-[500px] md:h-screen overflow-hidden">
       {/* Background Images */}
       {images.map((img, index) => (
         <img
@@ -41,11 +41,6 @@ const Banner = () => {
         <Navbar/>
       </div>
 
-      {/* Text Content */}
-      <div className="absolute z-20 inset-0 flex flex-col items-start justify-center text-white px-4 font-serif">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Capturing Your Forever</h1>
-        <p className="max-w-xl text-lg md:text-xl mb-6 font-mono">Timeless wedding stories, told through candid, elegant photography.</p>
-      </div>
     </div>
   )
 }
