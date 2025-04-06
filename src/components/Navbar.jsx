@@ -27,25 +27,25 @@ const Navbar = () => {
             <NavLink to="/about">About Us</NavLink>
             <NavLink to="/projects">Our Projects</NavLink>
           </div>
-          <div className="absolute inset-0 w-full h-full bg-[#D6A99A] bg-opacity-20"></div>
+          <div className="absolute inset-0 w-full h-full bg-[#D6A99A]"></div>
         </div>
       )}
         </div> 
 
-        <div className='flex items-center justify-center w-full'>
-            <NavLink>
+            <div className='flex items-center justify-center w-full'>
+                <NavLink>
                 <h1 className='text-white md:text-2xl uppercase font-semibold font-serif'>Candid Novia</h1>
-            </NavLink>
-        </div>
+                </NavLink>
+            </div>
 
-        <div className='flex items-center justify-end'>
-            <NavLink>
-                <img src={contact} alt="" className='w-6 h-6 md:w-8 md:h-8' />
-            </NavLink>
+            <div className='flex items-center justify-end'>
+                <NavLink>
+                    <img src={contact} alt="" className='w-6 h-6 md:w-8 md:h-8' />
+                </NavLink>
+            </div>
+            
         </div>
-        
     </div>
-</div>
   )
 }
 
