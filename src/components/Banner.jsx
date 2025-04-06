@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
-import candid1 from "../images/candid1.jpg";
-import candid2 from "../images/2025-02-26.jpg";
-import candid3 from "../images/2025-03-05.jpg";
+import candid1 from "../images/pexels-camera-treasure-928922-17548724.jpg";
+import candid2 from "../images/pexels-camera-treasure-928922-12165511.jpg";
+import candid3 from "../images/pexels-picturebymv-8295326.jpg";
 
 const images = [candid1, candid2, candid3];
 
