@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 const Contact = () => {
   return (
     <div>
-      <div className="bg-[#2C3E50] h-24">
+      <div className="bg-[#512d10] h-24">
       <Navbar/>
     </div>
 
@@ -73,7 +73,7 @@ const Contact = () => {
               className="mt-2 w-full border-none text-sm p-4 bg-gray-100 text-gray-700"></textarea>
           </div>
           <button type="submit"
-            className="inline-block bg-[#3a4861] text-white uppercase text-sm tracking-widest font-heading px-8 py-4 mt-6">
+            className="inline-block bg-[#512d10] text-white uppercase text-sm tracking-widest font-heading px-8 py-4 mt-6">
             Send message
           </button>
         </form>

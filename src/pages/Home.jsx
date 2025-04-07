@@ -49,15 +49,15 @@ const Home = () => {
 		</div>
 
     <div class="flex flex-wrap bg-black">
-    <a href="/category3" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
+    <a href="/projects" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
       <div class="relative z-10">Weddings</div>
       <img src={grid2} class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Stories" />
     </a>
-    <a href="/category2" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
+    <a href="/projects" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
       <div class="relative z-10">Lifestyle Photography</div>
       <img src={grid1} class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Engagements" />
     </a>
-    <a href="/category1" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
+    <a href="/projects" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
       <div class="relative z-10">Maternity & Newborn</div>
       <img src={grid} class="absolute inset-0 w-full h-full object-cover object-top opacity-50" alt="Weddings" />
     </a>
