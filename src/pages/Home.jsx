@@ -1,28 +1,36 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Banner from '../components/Banner'
-import img from "../images/pexels-anil-sharma-2149101452-31381682.jpg"
-import img1 from "../images/pexels-shaantanu-bhatt-941724-10327752.jpg"
-import img2 from "../images/pexels-camera-treasure-928922-17657763.jpg"
-
-import img4 from "../images/pexels-ds-babariya-756428940-28501688.jpg"
-
-import grid from "../images/pexels-theweddingfog-2995347.jpg"
-import grid1 from "../images/pexels-darkmodecinema-19567887.jpg"
-import grid2 from "../images/pexels-blackbean-weddings-820560431-19302447.jpg"
+// import img from "../images/pexels-anil-sharma-2149101452-31381682.jpg"
+// import img1 from "../images/pexels-shaantanu-bhatt-941724-10327752.jpg"
+// import img2 from "../images/pexels-camera-treasure-928922-17657763.jpg"
+// import img4 from "../images/pexels-ds-babariya-756428940-28501688.jpg"
+// import grid from "../images/pexels-theweddingfog-2995347.jpg"
+// import grid1 from "../images/pexels-darkmodecinema-19567887.jpg"
+// import grid2 from "../images/pexels-blackbean-weddings-820560431-19302447.jpg"
 import { NavLink } from 'react-router-dom'
+
+import img5 from "../img/0RFW9655.jpg"
+import img6 from "../img/2023-11-26.jpg"
+
+import grid3 from "../img/VNS00980.jpg"
+import grid4 from "../img/265643107_890687938313345_4712320185914611722_n.jpg"
+import grid5 from "../img/277907673_345457564226277_5762440556272328926_n.jpg"
+
+import img9 from "../img/VNS09157.jpg"
+import img10 from "../img/465026272_837250074972944_6710136917792525596_n.jpg"
+
+
 
 
 const Home = () => {
   return (
     <div className=''>
         <Banner/>
-      
-      
+
 		<div className="grid grid-cols-1 md:grid-cols-2">
 		  <div className="bg-white p-12 md:p-24 flex justify-end items-center">
-		      <img src={img} alt="Wedding Post" className="w-full max-w-md"/>
+		      <img src={img5} alt="Wedding Post" className="w-full max-w-md"/>
 		  </div>
 		  <div className="bg-gray-100 p-12 md:p-24 flex justify-start items-center">
 		    <div className="max-w-md">
@@ -35,7 +43,7 @@ const Home = () => {
 		</div>
 
     <div>
-		<img src={img1} class="w-full h-screen object-cover object-top" />
+		<img src={img6} class="w-full h-[500px] md:h-screen object-cover object-right-bottom " />
 		</div>
 
     <div className="max-w-xl mx-auto text-center py-24 md:py-32 px-2">
@@ -51,22 +59,22 @@ const Home = () => {
     <div class="flex flex-wrap bg-black">
     <a href="/projects" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
       <div class="relative z-5">Weddings</div>
-      <img src={grid2} class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Stories" />
+      <img src={grid3} class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Stories" />
     </a>
     <a href="/projects" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
-      <div class="relative z-5">Lifestyle Photography</div>
-      <img src={grid1} class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Engagements" />
+      <div class="relative z-5">Pre-wedding</div>
+      <img src={grid5} class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Engagements" />
     </a>
     <a href="/projects" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
       <div class="relative z-5">Maternity & Newborn</div>
-      <img src={grid} class="absolute inset-0 w-full h-full object-cover object-top opacity-50" alt="Weddings" />
+      <img src={grid4} class="absolute inset-0 w-full h-full object-cover object-left-bottom opacity-50" alt="Weddings" />
     </a>
     </div>
 
 
     <div className="grid grid-cols-1 md:grid-cols-2">
     <div className="bg-white p-12 md:p-24 flex flex-reverse justify-start items-center">  
-          <img src={img2} alt="Wedding Moment" className="w-full max-w-md"/>
+          <img src={img9} alt="Wedding Moment" className="w-full max-w-md"/>
       </div>
       <div className="md:order-first bg-gray-100 p-12 md:p-24 flex justify-end items-center">
         <div className="max-w-md">
@@ -79,7 +87,7 @@ const Home = () => {
     </div>  
 
       <div className="relative w-full px-6 py-16 md:py-24 lg:py-32 z-5">
-        <img src={img4} alt="Footer CTA Background" className="absolute inset-0 w-full h-full object-cover"/>
+        <img src={img10} alt="Footer CTA Background" className="absolute inset-0 w-full h-full object-cover"/>
         <div className="absolute inset-0 bg-black bg-opacity-50" />
         <div className="relative z-5 text-center text-white max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-6 font-serif">Let's Capture Your Moment</h1>
@@ -87,20 +95,6 @@ const Home = () => {
           <NavLink to="/contact" className="inline-block bg-yellow-900 text-white uppercase text-sm tracking-widest font-heading px-8 py-4 hover:bg-yellow-700 transition">Book Now</NavLink>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <Footer/>
     </div>

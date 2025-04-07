@@ -4,7 +4,11 @@ import candid1 from "../images/pexels-camera-treasure-928922-17548724.jpg";
 import candid2 from "../images/pexels-camera-treasure-928922-12165511.jpg";
 import candid3 from "../images/pexels-picturebymv-8295326.jpg";
 
-const images = [candid1, candid2, candid3];
+import img1 from "../img/2020-11-14.jpg"
+import img2 from "../img/0RFW5936.jpg"
+import img3 from "../img/VNS05994 copy.jpg"
+
+const images = [img1, img2, img3];
 
 const Banner = () => {
   const [current, setCurrent] = useState(0);

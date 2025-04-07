@@ -7,7 +7,7 @@ const Footer = () => {
       
       <div>
         <div className="text-white opacity-50 text-4xl font-display tracking-wider mb-6 font-serif">
-          Candid Novia
+        Rolling Frames
         </div>
         <p className="text-sm text-white text-opacity-50 leading-relaxed">
           Capturing love, laughter, and timeless memories through our lens.

@@ -34,7 +34,7 @@ const Navbar = () => {
 
             <div className='flex items-center justify-center w-full'>
                 <NavLink to="/">
-                <h1 className='text-white md:text-2xl text-lg uppercase font-semibold font-serif'>Candid Novia</h1>
+                <h1 className='text-white md:text-2xl text-lg uppercase font-semibold font-serif'>Rolling Frames</h1>
                 </NavLink>
             </div>
 
