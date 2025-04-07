@@ -17,12 +17,12 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[500px] md:h-screen overflow-hidden">
-      {/* Navbar */}
+    <div className="relative w-full h-[550px] md:h-screen overflow-hidden">
       <div className="absolute top-0 left-0 w-full z-10">
         <Navbar />
       </div>
-      <img src={images[current]} alt={`Slide ${current + 1}`} className="w-full h-full object-cover absolute inset-0 "/>
+      <img src={images[current]} alt={`Slide ${current + 1}`} className="w-full h-full object-cover object-center-bottom
+       absolute inset-0 "/>
     </div>
   );
 };

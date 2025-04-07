@@ -11,8 +11,6 @@ import grid4 from "../img/265643107_890687938313345_4712320185914611722_n.jpg"
 import grid5 from "../img/277907673_345457564226277_5762440556272328926_n.jpg"
 
 import img9 from "../img/VNS09157.jpg"
-import img10 from "../img/465026272_837250074972944_6710136917792525596_n.jpg"
-
 import video from "../img/yt1z.net - Asmi Bhaski Save the Date 2024 (1080p).mp4"
 
 
@@ -23,27 +21,19 @@ const Home = () => {
     <div className=''>
         <Banner/>
 
+
         <div className="grid grid-cols-1 md:grid-cols-2">
-  <div className="bg-[#f6f1ee] p-12 md:p-24 flex justify-end items-center">
-    <img src={img5} alt="Wedding Post" className="w-full max-w-md" />
-  </div>
-  <div className="bg-[#e8e0dd] p-12 md:p-24 flex justify-start items-center">
-    <div className="max-w-md">
-      <div className="w-24 h-2 bg-[#5c4a4a] mb-4"></div>
-      <h2 className="font-display font-bold font-serif text-2xl md:text-3xl lg:text-4xl mb-6 text-[#5c4a4a]">
-        Unforgettable Wedding Stories
-      </h2>
-      <p className="font-light text-[#7a6868] text-sm md:text-base mb-6 leading-relaxed">
-        Telling your love story through timeless imagery and natural emotion.
-      </p>
-      <NavLink
-        to="/about"
-        className="inline-block border-2 border-[#5c4a4a] font-light text-[#5c4a4a] text-sm uppercase tracking-widest py-3 px-8 hover:bg-[#5c4a4a] hover:text-white transition"
-      >
-        Read more
-      </NavLink>
-    </div>
-  </div>
+          <div className="bg-[#f6f1ee] p-12 md:p-24 flex justify-end items-center">
+            <img src={img5} alt="Wedding Post" className="w-full max-w-md" />
+          </div>
+          <div className="bg-[#e8e0dd] p-12 md:p-24 flex justify-start items-center">
+            <div className="max-w-md">
+              <div className="w-24 h-2 bg-[#5c4a4a] mb-4"></div>
+              <h2 className="font-display font-bold font-serif text-2xl md:text-3xl lg:text-4xl mb-6 text-[#5c4a4a]">Unforgettable Wedding Stories</h2>
+              <p className="font-light text-[#7a6868] text-sm md:text-base mb-6 leading-relaxed">Telling your love story through timeless imagery and natural emotion.</p>
+              <NavLink to="/about" className="inline-block border-2 border-[#5c4a4a] font-light text-[#5c4a4a] text-sm uppercase tracking-widest py-3 px-8 hover:bg-[#5c4a4a] hover:text-white transition">Read more</NavLink>
+            </div>
+          </div>
       </div>
 
     <div>
@@ -102,7 +92,7 @@ const Home = () => {
         </div>
       </div>
 
-        <Footer/>
+     <Footer/>
     </div>
   )
 }
