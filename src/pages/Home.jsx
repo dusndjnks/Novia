@@ -50,15 +50,15 @@ const Home = () => {
 
     <div class="flex flex-wrap bg-black">
     <a href="/projects" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
-      <div class="relative z-10">Weddings</div>
+      <div class="relative z-5">Weddings</div>
       <img src={grid2} class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Stories" />
     </a>
     <a href="/projects" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
-      <div class="relative z-10">Lifestyle Photography</div>
+      <div class="relative z-5">Lifestyle Photography</div>
       <img src={grid1} class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Engagements" />
     </a>
     <a href="/projects" class="bg-black relative w-full md:w-1/3 flex items-center justify-center h-72 font-heading text-white uppercase tracking-widest hover:opacity-75">
-      <div class="relative z-10">Maternity & Newborn</div>
+      <div class="relative z-5">Maternity & Newborn</div>
       <img src={grid} class="absolute inset-0 w-full h-full object-cover object-top opacity-50" alt="Weddings" />
     </a>
     </div>
@@ -78,10 +78,10 @@ const Home = () => {
       </div>
     </div>  
 
-      <div className="relative w-full px-6 py-16 md:py-24 lg:py-32">
+      <div className="relative w-full px-6 py-16 md:py-24 lg:py-32 z-5">
         <img src={img4} alt="Footer CTA Background" className="absolute inset-0 w-full h-full object-cover"/>
         <div className="absolute inset-0 bg-black bg-opacity-50" />
-        <div className="relative z-10 text-center text-white max-w-3xl mx-auto">
+        <div className="relative z-5 text-center text-white max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-6 font-serif">Let's Capture Your Moment</h1>
           <p className="text-base md:text-lg font-medium mb-8">Book your timeless photoshoot today with Candid Novia.</p>
           <NavLink to="/contact" className="inline-block bg-yellow-900 text-white uppercase text-sm tracking-widest font-heading px-8 py-4 hover:bg-yellow-700 transition">Book Now</NavLink>

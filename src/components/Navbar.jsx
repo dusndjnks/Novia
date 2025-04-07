@@ -18,7 +18,7 @@ const Navbar = () => {
             </button>
             {showMenu && (
         <div className="fixed inset-0 w-full h-full z-50 text-pink-900">
-          <div className="container h-full mx-auto px-6 py-8 relative z-10 flex flex-col items-center justify-center text-2xl uppercase font-bold tracking-widest space-y-6 font-mono">
+          <div className="container h-full mx-auto px-6 py-8 relative z-10 flex flex-col items-center justify-center text-2xl uppercase font-bold tracking-widest space-y-6 font-serif">
             <button onClick={() => setShowMenu(false)} className="absolute top-0 left-0 mt-8 ml-6">
               <img src={close} alt="Close" className="w-6 h-6 md:w-8 md:h-8" />
             </button>
