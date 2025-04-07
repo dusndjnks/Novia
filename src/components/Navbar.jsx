@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className='h-24 z-50 px-6 flex justify-center items-center'>
         <div className='flex items-center'>
             <button onClick={() => setShowMenu(true)}>
-                <img src={menu} alt="" className='w-6 h-6 md:w-8 md:h-8' />
+                <img src={menu} alt="" className='w-7 md:w-9' />
             </button>
             {showMenu && (
         <div className="fixed inset-0 w-full h-full z-50 text-pink-900">
@@ -22,12 +22,13 @@ const Navbar = () => {
             <button onClick={() => setShowMenu(false)} className="absolute top-0 left-0 mt-8 ml-6">
               <img src={close} alt="Close" className="w-6 h-6 md:w-8 md:h-8" />
             </button>
-            <NavLink className="text-[#2C3E50]" to="/">Home</NavLink>
-            <NavLink className="text-[#2C3E50]" to="/about">About Us</NavLink>
-            <NavLink className="text-[#2C3E50]" to="/projects">Our Projects</NavLink>
-            <NavLink className="text-[#2c3e50]" to="/contact">Contact</NavLink>
+            <NavLink className="text-[#805353]" to="/">Home</NavLink>
+            <NavLink className="text-[#805353]" to="/about">About Us</NavLink>
+            <NavLink className="text-[#805353]" to="/projects">Our Projects</NavLink>
+            <NavLink className="text-[#805353]" to="/films">Films</NavLink>
+            <NavLink className="text-[#805353]" to="/contact">Contact</NavLink>
           </div>
-          <div className="absolute inset-0 w-full h-full bg-[#c19f89]"></div>
+          <div className="absolute inset-0 w-full h-full bg-[#f6f1ee]"></div>
         </div>
       )}
         </div> 
@@ -40,7 +41,7 @@ const Navbar = () => {
 
             <div className='flex items-center justify-end'>
                 <NavLink to="/contact">
-                    <img src={contact} alt="" className='w-6 h-6 md:w-8 md:h-8' />
+                    <img src={contact} alt="" className='w-7 md:w-9' />
                 </NavLink>
             </div>
             
