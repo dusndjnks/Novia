@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom'
 
 const About = () => {
   return (
-    <div>
+    <div className='bg-[#f6f1ee] h-full'>
     <div className="bg-[#5c4a4a] h-24 ">
       <Navbar />
     </div>
@@ -60,22 +60,12 @@ const About = () => {
         <li class="relative flex flex-col sm:flex-row xl:flex-col items-start">
             <div class="order-1 sm:ml-6 xl:ml-0">
                 <h3 class="mb-1 text-[#4B2E39] font-semibold">
-                    <span class="mb-1 block text-sm leading-6 text-[#A67894]">Wedding Films</span>
+                    <span class="mb-1 block text-sm leading-6 text-[#A67894]">Wedding Photography</span>
                     Cinematic films capturing every moment of your special day.
                 </h3>
                 <div class="prose prose-sm text-[#5E4954]">
                     <p>From heartfelt vows to joyful celebrations, we turn your wedding into a timeless cinematic experience you'll cherish forever.</p>
                 </div>
-                <a class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 mt-6 bg-[#EAD7E8] text-[#4B2E39] hover:bg-[#d6bed3] focus:outline-none focus:ring-2 focus:ring-[#B1879C]"
-                    href="#">
-                    Learn more
-                    <span class="sr-only">, Wedding Films</span>
-                    <svg class="overflow-visible ml-3 text-[#BFA5B6] group-hover:text-[#9E7890]" width="3" height="6"
-                        viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M0 0L3 3L0 6"></path>
-                    </svg>
-                </a>
             </div>
             <img src={img1} alt="Wedding Film"
                 class="mb-6 shadow-md rounded-lg bg-[#FAF5F8] w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full"/>
@@ -90,16 +80,6 @@ const About = () => {
                 <div class="prose prose-sm text-[#5E4954]">
                     <p>Capture your chemistry and journey together in stunning locations with our curated pre-wedding sessions.</p>
                 </div>
-                <a class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 mt-6 bg-[#EAD7E8] text-[#4B2E39] hover:bg-[#d6bed3] focus:outline-none focus:ring-2 focus:ring-[#B1879C]"
-                    href="#">
-                    Learn more
-                    <span class="sr-only">, Pre-Wedding Shoots</span>
-                    <svg class="overflow-visible ml-3 text-[#BFA5B6] group-hover:text-[#9E7890]" width="3" height="6"
-                        viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M0 0L3 3L0 6"></path>
-                    </svg>
-                </a>
             </div>
             <img src={img2} alt="Pre-Wedding Shoot"
                 class="mb-6 shadow-md rounded-lg bg-[#FAF5F8] w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full"/>
@@ -114,16 +94,6 @@ const About = () => {
                 <div class="prose prose-sm text-[#5E4954]">
                     <p>Elegantly designed photo albums that preserve your love story in a tangible form for generations to enjoy.</p>
                 </div>
-                <a class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 mt-6 bg-[#EAD7E8] text-[#4B2E39] hover:bg-[#d6bed3] focus:outline-none focus:ring-2 focus:ring-[#B1879C]"
-                    href="#">
-                    Learn more
-                    <span class="sr-only">, Luxury Wedding Albums</span>
-                    <svg class="overflow-visible ml-3 text-[#BFA5B6] group-hover:text-[#9E7890]" width="3" height="6"
-                        viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M0 0L3 3L0 6"></path>
-                    </svg>
-                </a>
             </div>
             <img src={img3} alt="Wedding Album"
                 class="mb-6 shadow-md rounded-lg bg-[#FAF5F8] w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full"/>
@@ -187,7 +157,7 @@ const About = () => {
         </div>
     </div>
 
-    <div className="flex justify-center my-10">
+    <div className="flex justify-center my-10 ">
       <NavLink to="/films"className="inline-block px-6 py-3 text-sm font-semibold text-white bg-[#5C4A4A] rounded-full shadow-md hover:bg-[#473636] transition duration-300">
       More Films
       </NavLink>

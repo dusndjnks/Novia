@@ -94,7 +94,6 @@ const Films = () => {
               <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-4xl font-extrabold text-[#b8a398] mb-4">Your Story, Beautifully Told</h2>
                 <p className="text-lg text-gray-600">Elegant, emotional wedding films captured with an artistic touch.</p>
-                <button className="mt-6 px-6 py-3 bg-[#7c4a5c] text-white rounded-lg hover:bg-[#68384a]">Watch Our Films</button>
               </div>
             </section>
 
