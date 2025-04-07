@@ -23,7 +23,7 @@ const Home = () => {
 
 
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="bg-[#f6f1ee] p-12 md:p-24 flex justify-end items-center">
+          <div className="bg-[#f6f1ee] p-6 lg:p-20 flex md:justify-end justify-center items-center">
             <img src={img5} alt="Wedding Post" className="w-full max-w-md" />
           </div>
           <div className="bg-[#e8e0dd] p-12 md:p-24 flex justify-start items-center">
@@ -62,10 +62,9 @@ const Home = () => {
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-2">
-      <div className="bg-[#f6f1ee] p-12 md:p-24 flex flex-reverse justify-start items-center">
+      <div className="bg-[#f6f1ee] p-6 md:p-12 flex flex-reverse justify-start items-center">
         <div className="relative group">
-          <video src={video} autoPlay loop muted playsInline
-            className="w-full h-64 object-cover transition-transform duration-500 "/>
+          <video src={video} autoPlay loop muted playsInline className="w-full h-full object-cover transition-transform duration-500 "/>
           <div className="absolute inset-0 flex items-center justify-center">
             <NavLink to="/films" className="bg-white text-[#5c4a4a] font-semibold px-6 py-3 rounded-lg shadow-md uppercase tracking-wide hover:bg-[#5c4a4a] hover:text-white transition">Watch Our Films</NavLink>
           </div>
