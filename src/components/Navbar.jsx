@@ -30,8 +30,8 @@ const Navbar = () => {
             </button>
             <NavLink className="text-[#805353]" to="/">Home</NavLink>
             <NavLink className="text-[#805353]" to="/about">About Us</NavLink>
-            <NavLink className="text-[#805353]" to="/films">Wedding Films</NavLink>
             <NavLink className="text-[#805353]" to="/gallery">Wedding Gallery</NavLink>
+            <NavLink className="text-[#805353]" to="/films">Wedding Films</NavLink>
             <NavLink className="text-[#805353]" to="/contact">Contact</NavLink>
           </div>
           <div className="absolute inset-0 w-full h-full bg-[#f6f1ee]"></div>

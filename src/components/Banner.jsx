@@ -43,7 +43,7 @@ const Banner = () => {
   const images = isMobile ? mobileImages : desktopImages;
 
   return (
-    <div className="relative w-full h-[600px] md:h-screen overflow-hidden">
+    <div className="relative w-full h-[550px] md:h-screen overflow-hidden">
       <div className="absolute top-0 left-0 w-full z-10">
         <Navbar />
       </div>
