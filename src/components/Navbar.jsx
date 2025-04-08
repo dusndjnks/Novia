@@ -1,8 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import close from "../img/close.png"
-import menu from "../img/menu.png"
-import contact from "../img/contact.png"
+import close from "../images/close.png"
+import menu from "../images/menu.png"
 import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {

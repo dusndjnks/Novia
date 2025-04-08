@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import img from "../img/0RFW5859.jpg";
+// import img from "../img/0RFW5859.jpg";
 import img1 from "../img/0RFW5901.jpg";
 import img3 from "../img/0RFW6292.jpg";
 import img4 from "../img/0RFW9644.jpg";

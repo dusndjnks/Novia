@@ -18,18 +18,18 @@ const Footer = () => {
       <div className="font-display text-white text-sm tracking-widest mb-6 font-serif">
         About Us
       </div>
-      <a href="/our-story" className="block mb-3 hover:text-[#f6f1ee] transition">Our Story</a>
-      <a href="/team" className="block mb-3 hover:text-[#f6f1ee] transition">Meet the Team</a>
-      <a href="/careers" className="block mb-3 hover:text-[#f6f1ee] transition">Careers</a>
+      <a href="/about" className="block mb-3 hover:text-[#f6f1ee] transition">Our Story</a>
+      <a href="/gallery" className="block mb-3 hover:text-[#f6f1ee] transition">Gallery</a>
+      <a href="/films" className="block mb-3 hover:text-[#f6f1ee] transition">Films</a>
     </div>
 
     <div className="md:pl-16">
       <div className="font-display text-white text-sm tracking-widest mb-6 font-serif">
-        Services
+      Find Us Online
       </div>
-      <a href="/weddings" className="block mb-3 hover:text-[#f6f1ee] transition">Weddings</a>
-      <a href="/engagements" className="block mb-3 hover:text-[#f6f1ee] transition">Engagements</a>
-      <a href="/destinations" className="block mb-3 hover:text-[#f6f1ee] transition">Destination Shoots</a>
+      <a href="https://www.instagram.com/rollingframes/" className="block mb-3 hover:text-[#f6f1ee] transition">Instagram</a>
+      <a href="https://www.youtube.com/c/RollingFrames" className="block mb-3 hover:text-[#f6f1ee] transition">Youtube</a>
+      <a href="https://www.facebook.com/share/18ZeNsDdBW/" className="block mb-3 hover:text-[#f6f1ee] transition">Facebook</a>
     </div>
 
   </div>

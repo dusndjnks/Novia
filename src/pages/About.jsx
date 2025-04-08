@@ -1,11 +1,12 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import img from "../img/484558225_18180137593315040_922400866462828277_n.jpg"
-import img1 from "../img/0RFW5859.jpg"
-import img2 from "../img/2023-11-26 (5).jpg"
-import img3 from "../img/470235157_18170556256315040_8465270262075654219_n.jpg"
 import { NavLink } from 'react-router-dom'
+
+import img from "../images/about1.jpg"
+import img1 from "../images/about2.jpg"
+import img2 from "../images/about3.jpg"
+import img3 from "../images/about4.jpg"
 
 
 
