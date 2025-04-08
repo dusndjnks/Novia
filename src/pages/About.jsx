@@ -17,6 +17,8 @@ const About = () => {
       <Navbar />
     </div>
 
+    
+
     <section className="py-14 bg-[#fbf9f7]">
       <div className="max-w-screen-xl mx-auto md:px-8">
         <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
