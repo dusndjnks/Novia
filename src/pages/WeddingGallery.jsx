@@ -13,7 +13,7 @@ import img9 from "../img/2023-11-26 (3).jpg";
 import img10 from "../img/2023-11-26 (4).jpg";
 
 const Gallery = () => {
-  const images = [img, img1, img3, img4, img5, img6, img7, img8, img9, img10];
+  const images = [ img1, img3, img4, img5, img6, img7, img8, img9, img10];
   const [selectedImage, setSelectedImage] = useState(null);
 
   // Close modal on ESC key

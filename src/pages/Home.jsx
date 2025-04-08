@@ -50,6 +50,15 @@ return (
     <div className=''>
     <Banner/>
 
+    <section className="bg-[#f9f7f6] py-12 md:px-6">
+  <div className=" rounded-2xl p-8 text-center">
+    <h2 className="text-2xl md:text-3xl font-serif text-[#5C4A4A] mb-4 font-semibold">About Rolling Frames</h2>
+    <p className="text-[#5C4A4A] font-serif text-base md:text-lg leading-relaxed font-light">Rolling Frames Photography, based in Karumam, Thiruvananthapuram, is known for capturing heartfelt moments with elegance and style. With over 7 years of experience and a 4.9-star rating, we specialize in weddings, maternity, newborn, and lifestyle shoots—turning every story into timeless visuals.</p>
+  </div>
+</section>
+
+
+
     <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="bg-[#f6f1ee] p-6 lg:p-20 flex md:justify-end justify-center items-center">
           <img src={img5} alt="Wedding Post" className="w-full max-w-md" />

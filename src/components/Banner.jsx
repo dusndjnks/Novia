@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 
-import img1 from "../images/pc1.jpg"
+import img1 from "../images/pc11.jpg"
 import img2 from "../images/pc2.jpg"
 import img3 from "../images/pc3.jpg"
 
