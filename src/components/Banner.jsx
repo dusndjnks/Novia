@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 
-import img1 from "../images/pc11.jpg"
+import img1 from "../images/pc1.jpg"
 import img2 from "../images/pc2.jpg"
 import img3 from "../images/pc3.jpg"
+import img7 from "../images/pc5.jpg"
 
 import img4 from "../images/phone1.jpg"
 import img5 from "../images/phone2.jpg"
 import img6 from "../images/phone3.jpg"
 
 
-const desktopImages = [img1, img2, img3];
+const desktopImages = [img1, img7 , img3, img2];
 const mobileImages = [img4, img5, img6];
 
 const Banner = () => {
@@ -43,14 +44,14 @@ const Banner = () => {
   const images = isMobile ? mobileImages : desktopImages;
 
   return (
-    <div className="relative w-full h-[550px] md:h-screen overflow-hidden">
+    <div className="relative w-full h-[520px] md:h-screen overflow-hidden">
       <div className="absolute top-0 left-0 w-full z-10">
         <Navbar />
       </div>
       <img
         src={images[current]}
         alt={`Slide ${current + 1}`}
-        className="w-full h-full object-cover  absolute inset-0 transition-opacity duration-700"
+        className="w-full h-full object-cover absolute inset-0 transition-opacity duration-700"
       />
     </div>
   );
