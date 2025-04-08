@@ -52,18 +52,6 @@ const Contact = () => {
         <div className="flex items-center my-2 text-[#5C4A4A]"><svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /> </svg>Monday - Saturday: 9am - 8pm</div>
 
         <a href="https://www.google.co.in/maps/place/Rolling+Frames+Photography+Studio/@8.4738883,76.974414,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05bb11ca07ee31:0x1d546404958ecf53!8m2!3d8.473883!4d76.9769889!16s%2Fg%2F11fmgb6fhh?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center my-2 text-[#5C4A4A]"> <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>Rolling Frames Photography Studio</a>
-        <div className="w-full h-56 ">
-      <iframe
-        title="Rolling Frames Studio Location"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.2619628997772!2d76.97441397449401!3d8.47388829743229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bb11ca07ee31%3A0x1d546404958ecf53!2sRolling%20Frames%20Photography%20Studio!5e0!3m2!1sen!2sin!4v1744113069262!5m2!1sen!2sin"
-        width="100%"
-        height="100%"
-        style={{ border: 0 }}
-        allowFullScreen=""
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
       </div>
       <div>
         <form ref={form} onSubmit={sendEmail}>
