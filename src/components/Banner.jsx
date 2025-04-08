@@ -37,22 +37,22 @@ const Banner = () => {
         const images = isMobile ? mobileImages : desktopImages;
         return (prev + 1) % images.length;
       });
-    }, 4000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [isMobile]);
 
   const images = isMobile ? mobileImages : desktopImages;
 
   return (
-    <div className="relative w-full h-[520px] md:h-screen overflow-hidden">
-      <div className="absolute top-0 left-0 w-full z-10">
+    <div className="relative w-full h-[520px] md:h-screen  overflow-hidden">
+      <div className="absolute top-0 left-0 w-full z-50">
         <Navbar />
       </div>
-      <img
-        src={images[current]}
-        alt={`Slide ${current + 1}`}
-        className="w-full h-full object-cover absolute inset-0 transition-opacity duration-700"
-      />
+      {images.map((image, index) => (
+        <img key={index} src={image} alt={`Slide ${index + 1}`}
+          className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ease-in-out 
+          ${index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}/>
+      ))}
     </div>
   );
 };

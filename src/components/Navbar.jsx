@@ -13,10 +13,10 @@ const Navbar = () => {
     <div className='h-24 z-50 px-6 flex justify-center items-center'>
       
     <div className='flex  w-full'>
-                <NavLink to="/">
-                <h1 className='text-white md:text-2xl text-lg uppercase font-semibold font-serif'>Rolling Frames</h1>
-                </NavLink>
-            </div>
+      <NavLink to="/">
+      <h1 className='text-white md:text-2xl text-lg uppercase font-semibold font-serif'>Rolling Frames</h1>
+      </NavLink>
+    </div>
 
         <div className='flex items-center'>
             <button onClick={() => setShowMenu(true)}>
