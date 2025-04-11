@@ -22,7 +22,6 @@ import gallery18 from "../images/gallery/gallery (18).jpg";
 import gallery19 from "../images/gallery/gallery (19).jpg";
 import gallery20 from "../images/gallery/gallery (20).jpg";
 import gallery21 from "../images/gallery/gallery (21).jpg";
-import gallery22 from "../images/gallery/gallery (22).jpg";
 import gallery23 from "../images/gallery/gallery (23).jpg";
 import gallery24 from "../images/gallery/gallery (24).jpg";
 import gallery25 from "../images/gallery/gallery (25).jpg";
@@ -30,8 +29,6 @@ import gallery26 from "../images/gallery/gallery (26).jpg";
 import gallery27 from "../images/gallery/gallery (27).jpg";
 import gallery28 from "../images/gallery/gallery (28).jpg";
 import gallery29 from "../images/gallery/gallery (29).jpg";
-import gallery30 from "../images/gallery/gallery (30).jpg";
-import gallery31 from "../images/gallery/gallery (31).jpg";
 import gallery32 from "../images/gallery/gallery (32).jpg";
 import gallery33 from "../images/gallery/gallery (33).jpg";
 import gallery34 from "../images/gallery/gallery (34).jpg";
@@ -41,7 +38,7 @@ import gallery37 from "../images/gallery/gallery (37).jpg";
 import gallery38 from "../images/gallery/gallery (38).jpg";
 
 const Gallery = () => {
-  const images = [gallery12, gallery27, gallery3, gallery21, gallery36, gallery7, gallery15, gallery10, gallery30, gallery5, gallery8, gallery19, gallery28, gallery25, gallery22, gallery2, gallery24, gallery13, gallery38, gallery1, gallery6, gallery34, gallery17, gallery32, gallery29, gallery11, gallery26, gallery31, gallery14, gallery9, gallery4, gallery23, gallery18, gallery33, gallery16, gallery35, gallery37, gallery20];
+  const images = [gallery12, gallery27, gallery3, gallery21, gallery36, gallery7, gallery15, gallery10, gallery5, gallery8, gallery19, gallery28, gallery25, gallery2, gallery24, gallery13, gallery38, gallery1, gallery6, gallery34, gallery17, gallery32, gallery29, gallery11, gallery26, gallery14, gallery9, gallery4, gallery23, gallery18, gallery33, gallery16, gallery35, gallery37, gallery20];
   const [selectedImage, setSelectedImage] = useState(null);
 
   // Close modal on ESC key
