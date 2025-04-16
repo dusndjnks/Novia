@@ -48,10 +48,9 @@ useEffect(() => {
 
 useEffect(() => {
   animate("h6,h5",{
-    translateY : [-300,0],
-    // loop : true
+    translateY : [-300,0]
   })
-},[])
+},[]) 
 
 return (
     <div className=''>
