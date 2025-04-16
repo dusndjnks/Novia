@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { animate } from 'animejs'
+
 
 import Footer from '../components/Footer'
 import Banner from '../components/Banner'
@@ -15,9 +17,6 @@ import grid3 from "../images/grid3.jpg"
 
 import img9 from "../images/contact.jpg"
 import video from "../images/ytvideo.mp4"
-
-
-
 
 const Home = () => {
 
@@ -47,18 +46,23 @@ useEffect(() => {
     return () => clearInterval(interval);
 }, [testimonials.length]);
 
+useEffect(() => {
+  animate("h6,h5",{
+    translateY : [-300,0],
+    // loop : true
+  })
+},[])
+
 return (
     <div className=''>
     <Banner/>
 
-    <section className="bg-[#f9f7f6] py-12 md:px-6">
-  <div className=" rounded-2xl p-8 text-center">
-    <h2 className="text-2xl md:text-3xl font-serif text-[#5C4A4A] mb-4 font-semibold">About Rolling Frames</h2>
-    <p className="text-[#5C4A4A] font-serif text-base md:text-lg leading-relaxed font-light">Rolling Frames Photography, based in Karumam, Thiruvananthapuram, is known for capturing heartfelt moments with elegance and style. With over 7 years of experience and a 4.9-star rating, we specialize in weddings, maternity, newborn, and lifestyle shoots—turning every story into timeless visuals.</p>
-  </div>
-</section>
-
-
+      <section className="bg-[#f9f7f6] py-12 md:px-6">
+      <div className=" rounded-2xl p-8 text-center"   >
+        <h6  className="text-2xl md:text-3xl font-serif text-[#5C4A4A] mb-4 font-semibold">About Rolling Frames</h6>
+        <h5 className="text-[#5C4A4A] font-serif text-base md:text-lg leading-relaxed font-light">Rolling Frames Photography, based in Karumam, Thiruvananthapuram, is known for capturing heartfelt moments with elegance and style. With over 7 years of experience and a 4.9-star rating, we specialize in weddings, maternity, newborn, and lifestyle shoots—turning every story into timeless visuals.</h5>
+      </div>
+    </section>
 
     <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="bg-[#f6f1ee] p-6 lg:p-20 flex md:justify-end justify-center items-center">
@@ -99,7 +103,7 @@ return (
       </NavLink>
     </div>
 
-    <section className="py-14 bg-[#f9f7f6]">
+    <div className="py-14 bg-[#f9f7f6]">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="max-w-3xl mx-auto text-center">
                     <h3 className="text-[#5C4A4A] font-semibold text-2xl pb-6 font-serif">What People Are Saying</h3>
@@ -140,7 +144,7 @@ return (
                     </ul>
                 </div>
             </div>
-    </section>
+    </div>
 
     <div className="grid grid-cols-1 md:grid-cols-2">
       <div className="bg-[#f6f1ee] p-6 md:p-12 flex flex-reverse justify-start items-center">
