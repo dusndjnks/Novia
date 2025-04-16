@@ -44,7 +44,7 @@ useEffect(() => {
         setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
     }, 5000);
     return () => clearInterval(interval);
-}, [testimonials.length]);
+}, [testimonials.length]); 
 
 useEffect(() => {
   animate("h6,h5",{
