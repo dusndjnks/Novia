@@ -47,7 +47,7 @@ useEffect(() => {
 
 useEffect(() => {
   animate("h6,h5",{
-    translateY : [-300,0],
+    translateY : [-200,0],
   })
 },[]) 
 
