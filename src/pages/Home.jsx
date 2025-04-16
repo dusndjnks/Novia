@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { animate } from 'animejs'
 
-
 import Footer from '../components/Footer'
 import Banner from '../components/Banner'
 import { NavLink } from 'react-router-dom'
