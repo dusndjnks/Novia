@@ -45,18 +45,28 @@ useEffect(() => {
     return () => clearInterval(interval);
 }, [testimonials.length]); 
 
-useEffect(() => {
-  animate("h6,h5",{
-    translateY : [-200,0],
-  })
-},[]) 
+  useEffect(() => {
+    animate("h6,h5",{
+      translateY : [-300,0],
+      opacity : [-1 , 1]
+    })
+  },[]) 
+
+// animate("h1, p, h2", {
+//   translateY: [-200, 0], 
+//   opacity: [-1, 1],
+//   duration: 2000, 
+//   easing: 'easeInQuad',
+//   loop: true
+// });
+
 
 return (
     <div className=''>
     <Banner/>
 
-    <section className="bg-[#f9f7f6] py-12 md:px-6">
-      <div className=" rounded-2xl p-8 text-center"   >
+    <section  className="bg-[#f9f7f6] py-12 md:px-6">
+      <div className=" rounded-2xl p-8 text-center"  >
         <h6  className="text-2xl md:text-3xl font-serif text-[#5C4A4A] mb-4 font-semibold">About Rolling Frames</h6>
         <h5 className="text-[#5C4A4A] font-serif text-base md:text-lg leading-relaxed font-light">Rolling Frames Photography, based in Karumam, Thiruvananthapuram, is known for capturing heartfelt moments with elegance and style. With over 7 years of experience and a 4.9-star rating, we specialize in weddings, maternity, newborn, and lifestyle shoots—turning every story into timeless visuals.</h5>
       </div>
@@ -144,7 +154,7 @@ return (
             </div>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2">
+    <div  className="grid grid-cols-1 md:grid-cols-2">
       <div className="bg-[#f6f1ee] p-6 md:p-12 flex flex-reverse justify-start items-center">
      <NavLink to="films">
      <div className="relative group">
