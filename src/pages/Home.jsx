@@ -73,7 +73,7 @@ const Home = () => {
     useEffect(() => {
       AOS.init({
         duration: 1200,
-        once: false, // only animate once
+        once: true,
       });
     }, []);
 
@@ -230,17 +230,14 @@ return (
     <motion.div
       initial={{ y: 50, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+      transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
       viewport={{ once: true, amount: 0.4 }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}>
-      <NavLink to="/contact" className="inline-block bg-[#5c4a4a] text-[#ffffff] uppercase text-sm tracking-widest font-heading px-8 py-4 transition">Book Now</NavLink>
+      <NavLink to="/contact" className="inline-block bg-[#5c4a4a] text-[#ffffff] uppercase text-sm tracking-widest font-heading px-8 py-4 ">Book Now</NavLink>
     </motion.div>
-
   </div>
 </div>
-
-
      <Footer/>
     </div>
   )

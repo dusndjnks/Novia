@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Lenis from '@studio-freight/lenis'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import gallery1 from "../images/gallery/gallery (1).jpg";
 import gallery2 from "../images/gallery/gallery (2).jpg";
@@ -54,6 +56,12 @@ const Gallery = () => {
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
 
+      useEffect(() => {
+        AOS.init({
+          duration: 200,
+          once: true,
+        });
+      }, []);
 
       useEffect(() => {
           const lenis = new Lenis({
@@ -74,7 +82,7 @@ const Gallery = () => {
           };
         }, []);
     
-        
+
   return (
     <div>
       <div className="bg-[#5c4a4a] h-24">
@@ -82,20 +90,41 @@ const Gallery = () => {
       </div>
 
       <section className="px-4 py-12 bg-[#f9f7f6]">
-        <h2 className="text-4xl md:text-5xl text-center font-serif font-bold text-[#5C4A4A] mb-12"> Wedding Memories</h2>
+  <h2
+    data-aos="fade-up"
+    className="text-4xl md:text-5xl text-center font-serif font-bold text-[#5C4A4A] mb-12"
+  >
+    Wedding Memories
+  </h2>
 
-        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-          {images.map((src, index) => (
-            <img key={index} src={src} alt={`Wedding ${index + 1}`} className="w-full rounded-lg shadow-md break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105" onClick={() => setSelectedImage(src)} />
-          ))}
-        </div>
-      </section>
+  <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+    {images.map((src, index) => (
+      <img
+        key={index}
+        src={src}
+        alt={`Wedding ${index + 1}`}
+        className="w-full rounded-lg shadow-md break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105"
+        onClick={() => setSelectedImage(src)}
+        data-aos="zoom-in-up"
+        data-aos-delay={index * 100} // optional stagger effect
+      />
+    ))}
+  </div>
+</section>
 
-      {selectedImage && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center" onClick={() => setSelectedImage(null)} >
-          <img src={selectedImage} alt="Full View" className="w-full h-full object-contain p-4 rounded-md shadow-xl"/>
-        </div>
-      )}
+{selectedImage && (
+  <div
+    className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center"
+    onClick={() => setSelectedImage(null)}
+  >
+    <img
+      src={selectedImage}
+      alt="Full View"
+      className="w-full h-full object-contain p-4 rounded-md shadow-xl"
+    />
+  </div>
+)}
+
 
       <Footer />
     </div>

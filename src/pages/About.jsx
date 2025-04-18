@@ -4,7 +4,8 @@ import Footer from '../components/Footer'
 import { NavLink } from 'react-router-dom'
 import Lenis from '@studio-freight/lenis'
 import { useEffect } from 'react'
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import img from "../images/about1.jpg"
 import img1 from "../images/about2.jpg"
@@ -14,6 +15,14 @@ import img3 from "../images/about4.jpg"
 
 
 const About = () => {
+
+   useEffect(() => {
+        AOS.init({
+          duration: 1200,
+          once: true,
+        });
+      }, []);
+  
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -45,17 +54,10 @@ const About = () => {
     <section className="py-14 bg-[#fbf9f7]">
       <div className="max-w-screen-xl mx-auto md:px-8">
         <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
-          {/* Image */}
-          <div className="md:flex flex flex-col  p-3">
-            <img
-              src={img}
-              className="md:max-w-lg sm:rounded-lg rounded-2xl shadow-xl "
-              alt="Photography services"
-            />
+          <div  data-aos="fade-right" className="md:flex flex flex-col  p-3">
+            <img src={img} className="md:max-w-lg sm:rounded-lg rounded-2xl shadow-xl " alt="Photography services"/>
           </div>
-
-          {/* Text Content */}
-          <div className="max-w-xl px-4 space-y-5 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
+          <div data-aos="fade-left" className="max-w-xl px-4 space-y-5 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
             <h3 className="text-[#9d7c7c] font-semibold uppercase tracking-wide">
               About Us
             </h3>
@@ -73,7 +75,8 @@ const About = () => {
       </div>
     </section>
 
-    <div class="text-center px-4 sm:px-6 lg:px-8 mb-12 py-10">
+    <div data-aos="fade-up"
+     class="text-center px-4 sm:px-6 lg:px-8 mb-12 py-10">
       <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#4B2E39]">
         Capture the Magic of Your Special Day
       </h2>
@@ -126,7 +129,7 @@ const About = () => {
         </li>
     </ul>
 
-    <div class="text-center px-4 sm:px-6 lg:px-8 mb-12 py-10">
+    <div data-aos="fade-up" class="text-center px-4 sm:px-6 lg:px-8 mb-12 py-10">
       <h1 class="text-4xl sm:text-5xl font-bold text-center mb-4 text-[#5C4A4A]">
         Our Wedding Stories
       </h1>
