@@ -2,8 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import Lenis from '@studio-freight/lenis'
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 import ScrollFadeIn from '../components/ScrollFadeIn'
 
 import AOS from "aos";
@@ -194,51 +192,20 @@ return (
       </div>
     </div>
 
-      {/* <div className="relative w-full px-6 py-16 md:py-24 lg:py-32 z-5">
+      <div className="relative w-full px-6 py-16 md:py-24 lg:py-32 z-5">
         <img src={img9} alt="Footer CTA Background" className="absolute inset-0 w-full h-full object-cover"/>
         <div className="absolute inset-0 bg-black bg-opacity-50" />
         <div className="relative z-5 text-center text-white max-w-3xl mx-auto">
+          <ScrollFadeIn>
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-6 font-serif">Let's Capture Your Moment</h1>
           <p className="text-base md:text-lg font-medium mb-8">Book your timeless photoshoot today with Candid Novia.</p>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300 }}>
-            <NavLink to="/contact" className="inline-block bg-[#5c4a4a] text-[#ffffff] uppercase text-sm tracking-widest font-heading px-8 py-4 transition">Book Now</NavLink>
-          </motion.div>
+          <NavLink to="/contact" className="inline-block bg-[#5c4a4a] text-[#ffffff] uppercase text-sm tracking-widest font-heading px-8 py-4 transition">Book Now</NavLink>
+          </ScrollFadeIn>
         </div>
-      </div> */}
+      </div>
 
-<div className="relative w-full px-6 py-16 md:py-24 lg:py-32 z-5">
-  <img src={img9} alt="Footer CTA Background" className="absolute inset-0 w-full h-full object-cover" />
-  <div className="absolute inset-0 bg-black bg-opacity-50" />
-  <div className="relative z-5 text-center text-white max-w-3xl mx-auto">
-    <motion.h1
-      initial={{ y: 80, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.4 }}
-      className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-6 font-serif">Let's Capture Your Moment
-    </motion.h1>
-    <motion.p
-      initial={{ y: 60, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-      viewport={{ once: true, amount: 0.4 }}
-      className="text-base md:text-lg font-medium mb-8">Book your timeless photoshoot today with Candid Novia.
-    </motion.p>
-    <motion.div
-      initial={{ y: 50, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
-      viewport={{ once: true, amount: 0.4 }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}>
-      <NavLink to="/contact" className="inline-block bg-[#5c4a4a] text-[#ffffff] uppercase text-sm tracking-widest font-heading px-8 py-4 ">Book Now</NavLink>
-    </motion.div>
-  </div>
-</div>
      <Footer/>
+
     </div>
   )
 }
