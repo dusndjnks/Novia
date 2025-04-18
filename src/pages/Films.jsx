@@ -2,9 +2,31 @@ import React from 'react'
 import { useState } from "react";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Lenis from '@studio-freight/lenis';
+import { useEffect } from 'react';
 
 
 const Films = () => {
+
+      useEffect(() => {
+          const lenis = new Lenis({
+            duration: 0.2, // smaller = snappier
+            easing: (t) => t, // linear easing (no slow in/out)
+            smooth: true,
+          });
+      
+          const raf = (time) => {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+          };
+      
+          requestAnimationFrame(raf);
+      
+          return () => {
+            lenis.destroy();
+          };
+        }, []);
+    
 
     const [isVideoPoppedUp, setVideoPopUp] = useState(false);
     const [selectedVideo, setSelectedVideo] = useState(null);

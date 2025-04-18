@@ -2,6 +2,9 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { NavLink } from 'react-router-dom'
+import Lenis from '@studio-freight/lenis'
+import { useEffect } from 'react'
+
 
 import img from "../images/about1.jpg"
 import img1 from "../images/about2.jpg"
@@ -11,6 +14,27 @@ import img3 from "../images/about4.jpg"
 
 
 const About = () => {
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 0.2, // smaller = snappier
+      easing: (t) => t, // linear easing (no slow in/out)
+      smooth: true,
+    });
+
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  
   return (
     <div className='bg-[#f6f1ee] h-full'>
     <div className="bg-[#5c4a4a] h-24 ">

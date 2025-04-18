@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Lenis from '@studio-freight/lenis'
+
 import gallery1 from "../images/gallery/gallery (1).jpg";
 import gallery2 from "../images/gallery/gallery (2).jpg";
 import gallery3 from "../images/gallery/gallery (3).jpg";
@@ -52,6 +54,27 @@ const Gallery = () => {
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
 
+
+      useEffect(() => {
+          const lenis = new Lenis({
+            duration: 0.2, // smaller = snappier
+            easing: (t) => t, // linear easing (no slow in/out)
+            smooth: true,
+          });
+      
+          const raf = (time) => {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+          };
+      
+          requestAnimationFrame(raf);
+      
+          return () => {
+            lenis.destroy();
+          };
+        }, []);
+    
+        
   return (
     <div>
       <div className="bg-[#5c4a4a] h-24">

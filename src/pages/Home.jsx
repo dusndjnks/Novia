@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { animate } from 'animejs'
+import Lenis from '@studio-freight/lenis'
+
 
 import Footer from '../components/Footer'
 import Banner from '../components/Banner'
@@ -18,6 +20,25 @@ import img9 from "../images/contact.jpg"
 import video from "../images/ytvideo.mp4"
 
 const Home = () => {
+
+    useEffect(() => {
+      const lenis = new Lenis({
+        duration: 0.2, // smaller = snappier
+        easing: (t) => t, // linear easing (no slow in/out)
+        smooth: true,
+      });
+  
+      const raf = (time) => {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      };
+  
+      requestAnimationFrame(raf);
+  
+      return () => {
+        lenis.destroy();
+      };
+    }, []);
 
   const testimonials = [
     {
