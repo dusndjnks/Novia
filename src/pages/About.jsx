@@ -34,15 +34,14 @@ const About = () => {
     };
   }, []);
 
-  
+
   return (
     <div className='bg-[#f6f1ee] h-full'>
+
     <div className="bg-[#5c4a4a] h-24 ">
       <Navbar />
     </div>
-
     
-
     <section className="py-14 bg-[#fbf9f7]">
       <div className="max-w-screen-xl mx-auto md:px-8">
         <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
@@ -135,7 +134,6 @@ const About = () => {
         Relive the joy, laughter, and love from beautiful weddings we've been honored to capture.
       </p>
     </div>
-
 
     <div class="bg-[#f6f1ee]">
         <div class="container mx-auto px-4 py-8">

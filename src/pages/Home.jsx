@@ -3,7 +3,9 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { animate } from 'animejs'
 import Lenis from '@studio-freight/lenis'
-
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import ScrollFadeIn from '../components/ScrollFadeIn'
 
 import Footer from '../components/Footer'
 import Banner from '../components/Banner'
@@ -66,20 +68,14 @@ useEffect(() => {
     return () => clearInterval(interval);
 }, [testimonials.length]); 
 
-  useEffect(() => {
-    animate("h6,h5",{
-      translateY : [-300,0],
-      opacity : [-1 , 1]
-    })
-  },[]) 
+const [ref, inView] = useInView({
+  triggerOnce: true, // animate only once
+  threshold: 0.2,     // how much of element should be visible (0 to 1)
+});
 
-// animate("h1, p, h2", {
-//   translateY: [-200, 0], 
-//   opacity: [-1, 1],
-//   duration: 2000, 
-//   easing: 'easeInQuad',
-//   loop: true
-// });
+useEffect(() => {
+  console.log("In view:", inView);
+}, [inView]);
 
 
 return (
@@ -97,14 +93,16 @@ return (
         <div className="bg-[#f6f1ee] p-6 lg:p-20 flex md:justify-end justify-center items-center">
           <img src={img5} alt="Wedding Post" className="w-full max-w-md" />
         </div>
-        <div className="bg-[#e8e0dd] p-12 md:p-24 flex justify-start items-center">
-          <div className="max-w-md">
+       <div className="bg-[#e8e0dd] p-12 md:p-24 flex justify-start items-center">
+       <ScrollFadeIn>
+       <div className="max-w-md">
             <div className="w-24 h-2 bg-[#5c4a4a] mb-4"></div>
             <h2 className="font-display font-bold font-serif text-2xl md:text-3xl lg:text-4xl mb-6 text-[#5c4a4a]">Unforgettable Wedding Stories</h2>
             <p className="font-light text-[#7a6868] text-sm md:text-base mb-6 leading-relaxed">Telling your love story through timeless imagery and natural emotion.</p>
             <NavLink to="/about" className="inline-block border-2 border-[#5c4a4a] font-light text-[#5c4a4a] text-sm uppercase tracking-widest py-3 px-8 hover:bg-[#5c4a4a] hover:text-white transition">Read more</NavLink>
           </div>
-        </div>
+       </ScrollFadeIn>
+       </div>
     </div>
 
     <div>
@@ -112,9 +110,11 @@ return (
 		</div>
 
    <div className="max-w-xl mx-auto text-center py-24 md:py-32 px-2 ">
-      <div className="w-24 h-2 bg-[#5c4a4a] mb-4 mx-auto"></div>
+    <ScrollFadeIn>
+    <div className="w-24 h-2 bg-[#5c4a4a] mb-4 mx-auto"></div>
       <h2 className="font-serif font-display font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-[#5c4a4a]">Capturing Timeless Moments</h2>
       <p className="font-light text-[#7a6868] mb-6 leading-relaxed"> Celebrate love, light, and candid emotion through our lens. Let us turn your most beautiful day into lifelong memories. </p>
+    </ScrollFadeIn>
     </div>
 
     <div className="flex flex-wrap bg-black">
@@ -188,23 +188,62 @@ return (
       </div>
       <div className="md:order-first bg-[#ecdede] p-12 md:p-24 flex justify-end items-center">
         <div className="max-w-md">
-          <div className="w-24 h-2 bg-[#5c4a4a] mb-4"></div>
+         <ScrollFadeIn>
+         <div className="w-24 h-2 bg-[#5c4a4a] mb-4"></div>
           <h2 className="font-serif font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-6 text-[#5c4a4a]">Elegant Wedding Moments</h2>
           <p className="font-light text-[#7a6868] text-sm md:text-base mb-6 leading-relaxed">Discover stories captured with grace and warmth. Each frame tells the beauty of real moments on your special day.</p>
           <NavLink to="films" className="inline-block border-2 border-[#5c4a4a] font-light text-[#5c4a4a] text-sm uppercase tracking-widest py-3 px-8 hover:bg-[#5c4a4a] hover:text-white transition-colors duration-300">Wedding Films</NavLink>
+         </ScrollFadeIn>
         </div>
       </div>
     </div>
 
-      <div className="relative w-full px-6 py-16 md:py-24 lg:py-32 z-5">
+      {/* <div className="relative w-full px-6 py-16 md:py-24 lg:py-32 z-5">
         <img src={img9} alt="Footer CTA Background" className="absolute inset-0 w-full h-full object-cover"/>
         <div className="absolute inset-0 bg-black bg-opacity-50" />
         <div className="relative z-5 text-center text-white max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-6 font-serif">Let's Capture Your Moment</h1>
           <p className="text-base md:text-lg font-medium mb-8">Book your timeless photoshoot today with Candid Novia.</p>
-          <NavLink to="/contact" className="inline-block bg-[#5c4a4a] text-[#ffffff] uppercase text-sm tracking-widest font-heading px-8 py-4 transition">Book Now</NavLink>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}>
+            <NavLink to="/contact" className="inline-block bg-[#5c4a4a] text-[#ffffff] uppercase text-sm tracking-widest font-heading px-8 py-4 transition">Book Now</NavLink>
+          </motion.div>
         </div>
-      </div>
+      </div> */}
+
+<div className="relative w-full px-6 py-16 md:py-24 lg:py-32 z-5">
+  <img src={img9} alt="Footer CTA Background" className="absolute inset-0 w-full h-full object-cover" />
+  <div className="absolute inset-0 bg-black bg-opacity-50" />
+  <div className="relative z-5 text-center text-white max-w-3xl mx-auto">
+    <motion.h1
+      initial={{ y: 80, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.4 }}
+      className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-6 font-serif">Let's Capture Your Moment
+    </motion.h1>
+    <motion.p
+      initial={{ y: 60, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+      viewport={{ once: true, amount: 0.4 }}
+      className="text-base md:text-lg font-medium mb-8">Book your timeless photoshoot today with Candid Novia.
+    </motion.p>
+    <motion.div
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+      viewport={{ once: true, amount: 0.4 }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}>
+      <NavLink to="/contact" className="inline-block bg-[#5c4a4a] text-[#ffffff] uppercase text-sm tracking-widest font-heading px-8 py-4 transition">Book Now</NavLink>
+    </motion.div>
+
+  </div>
+</div>
+
 
      <Footer/>
     </div>
