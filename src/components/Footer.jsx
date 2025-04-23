@@ -15,7 +15,7 @@ const Footer = () => {
       </p>
     </div>
 
-    <div className="md:pl-16">
+    <div className="md:pl-28">
       <div className="font-display text-white text-sm tracking-widest mb-6 font-serif">
         About Us
       </div>

@@ -54,10 +54,10 @@ const About = () => {
     <section className="py-14 bg-[#fbf9f7]">
       <div className="max-w-screen-xl mx-auto md:px-8">
         <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
-          <div  data-aos="fade-right" className="md:flex flex flex-col  p-3">
+          <div  data-aos="fade-up" className="md:flex flex flex-col  p-3">
             <img src={img} className="md:max-w-lg sm:rounded-lg rounded-2xl shadow-xl " alt="Photography services"/>
           </div>
-          <div data-aos="fade-left" className="max-w-xl px-4 space-y-5 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
+          <div data-aos="fade-up" className="max-w-xl px-4 space-y-5 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
             <h3 className="text-[#9d7c7c] font-semibold uppercase tracking-wide">
               About Us
             </h3>
@@ -139,7 +139,7 @@ const About = () => {
     </div>
 
     <div class="bg-[#f6f1ee]">
-        <div class="container mx-auto px-4 py-8">
+        <div class="container mx-auto px-4 pt-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
                     <a href="https://www.youtube.com/watch?v=OVVdeF_dq4Y" target="_blank">
@@ -185,7 +185,7 @@ const About = () => {
         </div>
     </div>
 
-    <div className="flex justify-center my-10 ">
+    <div className="flex justify-center my-5 ">
       <NavLink to="/films"className="inline-block px-6 py-3 text-sm font-semibold text-white bg-[#5C4A4A] rounded-full shadow-md hover:bg-[#473636] transition duration-300">
       More Films
       </NavLink>

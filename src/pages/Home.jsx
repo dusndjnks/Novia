@@ -23,24 +23,24 @@ import video from "../images/ytvideo.mp4"
 
 const Home = () => {
 
-    useEffect(() => {
-      const lenis = new Lenis({
-        duration: 0.2, // smaller = snappier
-        easing: (t) => t, // linear easing (no slow in/out)
-        smooth: true,
-      });
+    // useEffect(() => {
+    //   const lenis = new Lenis({
+    //     duration: 0.2, // smaller = snappier
+    //     easing: (t) => t, // linear easing (no slow in/out)
+    //     smooth: true,
+    //   });
   
-      const raf = (time) => {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      };
+    //   const raf = (time) => {
+    //     lenis.raf(time);
+    //     requestAnimationFrame(raf);
+    //   };
   
-      requestAnimationFrame(raf);
+    //   requestAnimationFrame(raf);
   
-      return () => {
-        lenis.destroy();
-      };
-    }, []);
+    //   return () => {
+    //     lenis.destroy();
+    //   };
+    // }, []);
 
   const testimonials = [
     {
@@ -88,15 +88,15 @@ return (
     </section>
 
     <div className="grid grid-cols-1 md:grid-cols-2">
-        <div data-aos="fade-right" className="bg-[#f6f1ee] p-6 lg:p-20 flex md:justify-end justify-center items-center">
-          <img src={img5} alt="Wedding Post" className="w-full max-w-md" />
+        <div className="bg-[#f6f1ee] p-6 lg:p-20 flex md:justify-end justify-center items-center">
+          <img data-aos="fade-up" src={img5} alt="Wedding Post" className="w-full max-w-md" />
         </div>
-       <div data-aos="fade-left" className="bg-[#e8e0dd] p-12 md:p-24 flex justify-start items-center">
-       <div className="max-w-md">
-            <div className="w-24 h-2 bg-[#5c4a4a] mb-4"></div>
-            <h2 className="font-display font-bold font-serif text-2xl md:text-3xl lg:text-4xl mb-6 text-[#5c4a4a]">Unforgettable Wedding Stories</h2>
-            <p className="font-light text-[#7a6868] text-sm md:text-base mb-6 leading-relaxed">Telling your love story through timeless imagery and natural emotion.</p>
-            <NavLink to="/about" className="inline-block border-2 border-[#5c4a4a] font-light text-[#5c4a4a] text-sm uppercase tracking-widest py-3 px-8 hover:bg-[#5c4a4a] hover:text-white transition">Read more</NavLink>
+       <div  className="bg-[#e8e0dd] p-12 md:p-24 flex justify-start items-center">
+       <div  className="max-w-md">
+            <div data-aos="fade-up" className="w-24 h-2 bg-[#5c4a4a] mb-4"></div>
+            <h2 data-aos="fade-up" className="font-display font-bold font-serif text-2xl md:text-3xl lg:text-4xl mb-6 text-[#5c4a4a]">Unforgettable Wedding Stories</h2>
+            <p data-aos="fade-up" className="font-light text-[#7a6868] text-sm md:text-base mb-6 leading-relaxed">Telling your love story through timeless imagery and natural emotion.</p>
+            <NavLink data-aos="fade-up" to="/about" className="inline-block border-2 border-[#5c4a4a] font-light text-[#5c4a4a] text-sm uppercase tracking-widest py-3 px-8 hover:bg-[#5c4a4a] hover:text-white transition">Read more</NavLink>
           </div>
        </div>
     </div>
@@ -174,7 +174,7 @@ return (
     <div  className="grid grid-cols-1 md:grid-cols-2">
       <div className="bg-[#f6f1ee] p-6 md:p-12 flex flex-reverse justify-start items-center">
      <NavLink to="films">
-     <div className="relative group" data-aos="fade-left" >
+     <div className="relative group" data-aos="fade-up" >
           <video src={video} autoPlay loop muted playsInline className="w-full h-full object-cover transition-transform duration-500 "/>
           <div className="absolute inset-0 flex items-center justify-center">
             <NavLink to="films" className="bg-white text-[#5c4a4a] font-semibold px-6 py-3 rounded-lg shadow-md uppercase tracking-wide hover:bg-[#5c4a4a] hover:text-white transition">Watch Our Films</NavLink>
@@ -183,11 +183,11 @@ return (
      </NavLink>
       </div>
       <div  className="md:order-first bg-[#ecdede] p-12 md:p-24 flex justify-end items-center">
-        <div className="max-w-md" data-aos="fade-right">
-         <div className="w-24 h-2 bg-[#5c4a4a] mb-4"></div>
-          <h2 className="font-serif font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-6 text-[#5c4a4a]">Elegant Wedding Moments</h2>
-          <p className="font-light text-[#7a6868] text-sm md:text-base mb-6 leading-relaxed">Discover stories captured with grace and warmth. Each frame tells the beauty of real moments on your special day.</p>
-          <NavLink to="films" className="inline-block border-2 border-[#5c4a4a] font-light text-[#5c4a4a] text-sm uppercase tracking-widest py-3 px-8 hover:bg-[#5c4a4a] hover:text-white transition-colors duration-300">Wedding Films</NavLink>
+        <div className="max-w-md" >
+         <div data-aos="fade-up" className="w-24 h-2 bg-[#5c4a4a] mb-4"></div>
+          <h2 data-aos="fade-up" className="font-serif font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-6 text-[#5c4a4a]">Elegant Wedding Moments</h2>
+          <p data-aos="fade-up" className="font-light text-[#7a6868] text-sm md:text-base mb-6 leading-relaxed">Discover stories captured with grace and warmth. Each frame tells the beauty of real moments on your special day.</p>
+          <NavLink data-aos="fade-up" to="films" className="inline-block border-2 border-[#5c4a4a] font-light text-[#5c4a4a] text-sm uppercase tracking-widest py-3 px-8 hover:bg-[#5c4a4a] hover:text-white transition-colors duration-300">Wedding Films</NavLink>
         </div>
       </div>
     </div>
