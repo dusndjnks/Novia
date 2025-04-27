@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import Lenis from '@studio-freight/lenis'
 import ScrollFadeIn from '../components/ScrollFadeIn'
 
 import AOS from "aos";
@@ -91,12 +90,12 @@ return (
         <div className="bg-[#f6f1ee] p-6 lg:p-20 flex md:justify-end justify-center items-center">
           <img data-aos="fade-up" src={img5} alt="Wedding Post" className="w-full max-w-md" />
         </div>
-       <div  className="bg-[#e8e0dd] p-12 md:p-24 flex justify-start items-center">
+       <div  className="bg-[#e8e0dd] p-12 md:p-24 flex justify-start items-center" data-aos="fade-up">
        <div  className="max-w-md">
-            <div data-aos="fade-up" className="w-24 h-2 bg-[#5c4a4a] mb-4"></div>
-            <h2 data-aos="fade-up" className="font-display font-bold font-serif text-2xl md:text-3xl lg:text-4xl mb-6 text-[#5c4a4a]">Unforgettable Wedding Stories</h2>
-            <p data-aos="fade-up" className="font-light text-[#7a6868] text-sm md:text-base mb-6 leading-relaxed">Telling your love story through timeless imagery and natural emotion.</p>
-            <NavLink data-aos="fade-up" to="/about" className="inline-block border-2 border-[#5c4a4a] font-light text-[#5c4a4a] text-sm uppercase tracking-widest py-3 px-8 hover:bg-[#5c4a4a] hover:text-white transition">Read more</NavLink>
+            <div className="w-24 h-2 bg-[#5c4a4a] mb-4"></div>
+            <h2 className="font-display font-bold font-serif text-2xl md:text-3xl lg:text-4xl mb-6 text-[#5c4a4a]">Unforgettable Wedding Stories</h2>
+            <p className="font-light text-[#7a6868] text-sm md:text-base mb-6 leading-relaxed">Telling your love story through timeless imagery and natural emotion.</p>
+            <NavLink to="/about" className="inline-block border-2 border-[#5c4a4a] font-light text-[#5c4a4a] text-sm uppercase tracking-widest py-3 px-8 hover:bg-[#5c4a4a] hover:text-white transition">Read more</NavLink>
           </div>
        </div>
     </div>
@@ -131,19 +130,19 @@ return (
     <div className="py-14 bg-[#f9f7f6]">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h3 className="text-[#5C4A4A] font-semibold text-2xl pb-6 font-serif">What People Are Saying</h3>
+                    <h3 className="text-[#5C4A4A] font-semibold text-2xl lg:text-3xl pb-6 font-serif">What People Are Saying</h3>
                     <ul>
                         {testimonials.map((item, idx) => (
                             currentTestimonial === idx && (
                                 <li key={idx}>
                                     <figure>
                                         <blockquote>
-                                            <p className="text-gray-800 text-xl font-semibold sm:text-2xl">
+                                            <p className="text-gray-800 md:text-xl font-thin sm:text-xl">
                                                 “{item.quote}”
                                             </p>
                                         </blockquote>
                                         <div className="mt-6">
-                                            <img src={item.avatar} className="w-16 h-16 mx-auto rounded-full" alt={item.name} />
+                                            <img src={item.avatar} className="md:w-16 md:h-16 mx-auto h-10 w-10 rounded-full" alt={item.name} />
                                             <div className="mt-3">
                                                 <span className="block text-[#5C4A4A] font-semibold">{item.name}</span>
                                             </div>
@@ -182,12 +181,12 @@ return (
         </div>
      </NavLink>
       </div>
-      <div  className="md:order-first bg-[#ecdede] p-12 md:p-24 flex justify-end items-center">
+      <div  className="md:order-first bg-[#ecdede] p-12 md:p-24 flex justify-end items-center" data-aos="fade-up">
         <div className="max-w-md" >
-         <div data-aos="fade-up" className="w-24 h-2 bg-[#5c4a4a] mb-4"></div>
-          <h2 data-aos="fade-up" className="font-serif font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-6 text-[#5c4a4a]">Elegant Wedding Moments</h2>
-          <p data-aos="fade-up" className="font-light text-[#7a6868] text-sm md:text-base mb-6 leading-relaxed">Discover stories captured with grace and warmth. Each frame tells the beauty of real moments on your special day.</p>
-          <NavLink data-aos="fade-up" to="films" className="inline-block border-2 border-[#5c4a4a] font-light text-[#5c4a4a] text-sm uppercase tracking-widest py-3 px-8 hover:bg-[#5c4a4a] hover:text-white transition-colors duration-300">Wedding Films</NavLink>
+         <div className="w-24 h-2 bg-[#5c4a4a] mb-4"></div>
+          <h2 className="font-serif font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-6 text-[#5c4a4a]">Elegant Wedding Moments</h2>
+          <p className="font-light text-[#7a6868] text-sm md:text-base mb-6 leading-relaxed">Discover stories captured with grace and warmth. Each frame tells the beauty of real moments on your special day.</p>
+          <NavLink  to="films" className="inline-block border-2 border-[#5c4a4a] font-light text-[#5c4a4a] text-sm uppercase tracking-widest py-3 px-8 hover:bg-[#5c4a4a] hover:text-white transition-colors duration-300">Wedding Films</NavLink>
         </div>
       </div>
     </div>
