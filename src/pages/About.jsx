@@ -6,6 +6,7 @@ import Lenis from '@studio-freight/lenis'
 import { useEffect } from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { LazyMotion } from 'framer-motion'
 
 import img from "../images/about1.jpg"
 import img1 from "../images/about2.jpg"

@@ -94,16 +94,22 @@ const Gallery = () => {
 
   // Go to previous image
   const prevImage = (e) => {
-    e.stopPropagation(); // Prevent modal close
-    setSelectedIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-    setSelectedImage(images[selectedIndex === 0 ? images.length - 1 : selectedIndex - 1]);
+    e.stopPropagation();
+    setSelectedIndex((prev) => {
+      const newIndex = prev === 0 ? images.length - 1 : prev - 1;
+      setSelectedImage(images[newIndex]);
+      return newIndex;
+    });
   };
 
   // Go to next image
   const nextImage = (e) => {
     e.stopPropagation();
-    setSelectedIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    setSelectedImage(images[selectedIndex === images.length - 1 ? 0 : selectedIndex + 1]);
+    setSelectedIndex((prev) => {
+      const newIndex = prev === images.length - 1 ? 0 : prev + 1;
+      setSelectedImage(images[newIndex]);
+      return newIndex;
+    });
   };
 
   return (
@@ -129,7 +135,7 @@ const Gallery = () => {
                 src={src}
                 alt={`Wedding ${index + 1}`}
                 effect="blur"
-                className="w-full rounded-lg shadow-md break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105"
+                className="w-full rounded-lg shadow-md break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 bg-gray-100"
                 onClick={() => openImage(src, index)}
               />
             ))}
@@ -137,54 +143,121 @@ const Gallery = () => {
         )}
       </section>
 
-      {selectedImage && (
-        <div
-          className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center p-4"
-          onClick={() => {
-            setSelectedImage(null);
-            setSelectedIndex(null);
-          }}
-        >
-          {/* Close button */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              setSelectedImage(null);
-              setSelectedIndex(null);
-            }}
-            className="absolute top-6 right-6 text-white text-3xl font-bold bg-red-600 rounded-full w-12 h-12 flex items-center justify-center hover:bg-red-700 shadow-lg transition"
-            aria-label="Close image"
-          >
-            &times;
-          </button>
+    {selectedImage && (
+  <div
+    className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center p-4"
+    onClick={() => {
+      setSelectedImage(null);
+      setSelectedIndex(null);
+    }}
+  >
+    {/* Close button */}
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        setSelectedImage(null);
+        setSelectedIndex(null);
+      }}
+      className="absolute top-6 right-6 text-white text-3xl font-bold bg-red-600 rounded-full w-12 h-12 flex items-center justify-center hover:bg-red-700 shadow-lg transition z-50"
+      aria-label="Close image"
+    >
+      &times;
+    </button>
 
-          {/* Prev Button */}
-          <button
-            onClick={prevImage}
-            className="absolute left-4 md:left-10 top-1/2 transform -translate-y-1/2 text-white text-4xl md:text-6xl font-bold bg-black bg-opacity-40 hover:bg-opacity-70 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center cursor-pointer select-none"
-            aria-label="Previous image"
-          >
-            &#8249;
-          </button>
+    {/* Image container */}
+    <div className="relative max-w-full max-h-full flex items-center justify-center">
+      {/* Image */}
+      <img
+        src={selectedImage}
+        alt="Full View"
+        className="max-w-full max-h-[85vh] rounded-xl shadow-2xl animate-zoomIn"
+        onClick={(e) => e.stopPropagation()}
+      />
 
-          {/* Next Button */}
-          <button
-            onClick={nextImage}
-            className="absolute right-4 md:right-10 top-1/2 transform -translate-y-1/2 text-white text-4xl md:text-6xl font-bold bg-black bg-opacity-40 hover:bg-opacity-70 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center cursor-pointer select-none"
-            aria-label="Next image"
-          >
-            &#8250;
-          </button>
+      {/* Prev Button (top-left corner of image) */}
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          prevImage(e);
+        }}
+        className="absolute top-4 left-4 text-white text-3xl font-bold bg-black bg-opacity-50 hover:bg-opacity-80 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center z-40"
+        aria-label="Previous image"
+      >
+        &#8249;
+      </button>
 
-          {/* Image itself */}
-          <img
-            src={selectedImage}
-            alt="Full View"
-            className="max-w-full max-h-full rounded-xl shadow-2xl animate-zoomIn"
-            onClick={(e) => e.stopPropagation()} // Prevent modal close on image click
-          />
-        </div>
-      )}
+      {/* Next Button (top-right corner of image) */}
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          nextImage(e);
+        }}
+        className="absolute top-4 right-4 text-white text-3xl font-bold bg-black bg-opacity-50 hover:bg-opacity-80 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center z-40"
+        aria-label="Next image"
+      >
+        &#8250;
+      </button>
+    </div>
+  </div>
+)}
+{selectedImage && (
+  <div
+    className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center p-4"
+    onClick={() => {
+      setSelectedImage(null);
+      setSelectedIndex(null);
+    }}
+  >
+    {/* Close button at screen top-right */}
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        setSelectedImage(null);
+        setSelectedIndex(null);
+      }}
+      className="absolute top-6 right-6 text-white text-3xl font-bold bg-red-600 rounded-full w-12 h-12 flex items-center justify-center hover:bg-red-700 shadow-lg transition z-50"
+      aria-label="Close image"
+    >
+      &times;
+    </button>
+
+    {/* Image container with relative positioning */}
+    <div className="relative max-w-full max-h-full flex items-center justify-center">
+      {/* Image */}
+      <img
+        src={selectedImage}
+        alt="Full View"
+        className="max-w-full max-h-[85vh] rounded-xl shadow-2xl animate-zoomIn"
+        onClick={(e) => e.stopPropagation()}
+      />
+
+      {/* Prev Button - center left */}
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          prevImage(e);
+        }}
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-4xl font-bold bg-black bg-opacity-50 hover:bg-opacity-80 rounded-full w-12 h-12 flex items-center justify-center z-40"
+        aria-label="Previous image"
+      >
+        &#8249;
+      </button>
+
+      {/* Next Button - center right */}
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          nextImage(e);
+        }}
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-4xl font-bold bg-black bg-opacity-50 hover:bg-opacity-80 rounded-full w-12 h-12 flex items-center justify-center z-40"
+        aria-label="Next image"
+      >
+        &#8250;
+      </button>
+    </div>
+  </div>
+)}
+
 
       <Footer />
 
@@ -206,4 +279,5 @@ const Gallery = () => {
     </div>
   );
 };
+
 export default Gallery;
