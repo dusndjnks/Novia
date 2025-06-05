@@ -30,6 +30,14 @@ const Contact = () => {
       );
   };
 
+   const instagramPosts = [
+    { id: 1, image: '../images/phone1.jpg', alt: 'Instagram post 1' },
+    { id: 2, image: '../images/phone1.jpg', alt: 'Instagram post 2' },
+    { id: 3, image: '../images/phone1.jpg', alt: 'Instagram post 3' },
+    { id: 4, image: '../images/phone1.jpg', alt: 'Instagram post 4' },
+    { id: 5, image: '../images/phone1.jpg', alt: 'Instagram post 5' },
+  ];
+
   return (
     <div>
       <div className="bg-[#5c4a4a] h-24">
